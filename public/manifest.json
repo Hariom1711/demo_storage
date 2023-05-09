@@ -5,21 +5,60 @@
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose":"any maskable"
     },
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose":"any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose":"any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "prefer_related_applications":"true"
+,
+  "shortcuts": [
+    {
+      "name":"The name you would like to be displayed for your shortcut",
+      "url":"The url you would like to open when the user chooses this shortcut. This must be a URL local to your PWA. For example: If my start_url is /, this URL must be something like /shortcut",
+      "description":"A description of the functionality of this shortcut"
+    }
+  ]
+,
+  "share_target": {
+    "action": "The action you would like to perform when the user chooses to share content to your app. For example: share",
+    "method": "The method you would like to use to share content to your app. For example: GET",
+    "enctype": "The encoding type you would like to use to share content to your app. For example: application/x-www-form-urlencoded",
+    "params": {
+      "title": "The title of the content you would like to share",
+      "text": "The text of the content you would like to share",
+      "url": "The url of the content you would like to share"
+    }
+  }
+,
+  "protocol_handlers": [
+    {
+      "protocol":"The protocol you would like to handle. For example: web+myapp",
+      "url":"The url you would like to open when the user chooses this shortcut. This must be a URL local to your PWA. For example: If my start_url is /, this URL must be something like /shortcut"
+    }
+  ]
+,
+  "file_handlers": [
+    {
+      "action": "The url you would like to open when the user chooses to share content to your app. This URL must have code to do something with the returned file.",
+      "accept": {
+        "text/*": [".txt"]
+      }
+    }
+  ]
 }
